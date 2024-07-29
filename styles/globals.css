@@ -25,3 +25,10 @@ body {
 		text-wrap: balance;
 	}
 }
+
+.section-title {
+	@apply text-5xl font-semibold leading-tight tracking-tighter;
+}
+.section-body {
+	@apply font-medium text-neutral-600 mt-4;
+}
