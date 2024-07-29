@@ -9,7 +9,7 @@ interface FooterCardProps {
 
 const FooterCard: FC<FooterCardProps> = ({ title, links }) => {
 	return (
-		<div className="basis-1/4 text-white text-lg flex flex-col gap-4">
+		<div className="basis-full md:basis-1/4 text-white text-xl sm:text-lg flex flex-col gap-4">
 			<p className="uppercase font-light tracking-wider">{title}</p>
 			<div className="flex flex-col text-neutral-400 gap-1">
 				{links?.map((link, index) => (
@@ -30,18 +30,18 @@ const Footer = () => {
 
 	return (
 		<footer className="bg-zinc-950">
-			<div className="container mx-auto py-24">
-				<div className="flex flex-wrap justify-between">
-					<div className="flex flex-col gap-4">
+			<div className="container mx-auto p-6 py-14 sm:p-0 sm:py-24">
+				<div className="flex flex-wrap justify-between gap-10 sm:gap-0">
+					<div className="flex flex-col gap-2 sm:gap-6 basis-full lg:basis-1/2">
 						<div className="logo text-orange-600 text-3xl font-bold tracking-tighter basis-1/2">
 							PeakStudio
 						</div>
-						<div className="text-xl font-light text-white basis-1/2">
+						<div className="text-base sm:text-xl font-light text-white basis-1/2">
 							Hire the Product Designer within 12 hours
 						</div>
 					</div>
-					<div className="flex flex-col gap-4">
-						<div className="text-xl uppercase font-light tracking text-white">
+					<div className="flex flex-col gap-2 sm:gap-4 basis-full lg:basis-1/2">
+						<div className="text-base sm:text-xl uppercase font-light tracking text-white">
 							Sign Up To Stay Update
 						</div>
 						<div className="relative">
@@ -63,10 +63,10 @@ const Footer = () => {
 							</form>
 						</div>
 					</div>
-					<div className="w-full h-px bg-neutral-600 my-10"></div>
+					<div className="w-full h-px bg-neutral-600 mb-10 sm:my-10"></div>
 				</div>
 
-				<div className="flex gap-[4.5rem]">
+				<div className="flex gap-y-10 flex-wrap">
 					<FooterCard
 						title="Company"
 						links={[
@@ -105,7 +105,7 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className="w-full h-px bg-neutral-600 my-10"></div>
-			<div className="container mx-auto flex text-white pb-10">
+			<div className="container mx-auto flex text-white pb-10 px-6">
 				<p className="text-inherit basis-5/6">
 					Designed by
 					<a

@@ -17,7 +17,7 @@
 }
 
 body {
-	@apply bg-gray-50;
+	@apply bg-gray-50 overflow-x-hidden;
 }
 
 @layer utilities {
@@ -26,9 +26,19 @@ body {
 	}
 }
 
+.wrapper {
+	@apply mt-20 md:mt-32;
+}
+
+.section-wrapper {
+	@apply flex flex-col gap-16 md:gap-32 md:pt-36 md:pb-24;
+}
+.section {
+	@apply p-6 md:p-0;
+}
 .section-title {
-	@apply text-5xl font-semibold leading-tight tracking-tighter;
+	@apply text-2xl sm:text-5xl font-semibold leading-tight tracking-tighter;
 }
 .section-body {
-	@apply font-medium text-neutral-600 mt-4;
+	@apply text-base sm:text-xl font-medium text-neutral-600 mt-4;
 }
