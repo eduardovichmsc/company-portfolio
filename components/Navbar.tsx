@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BsArrowRightShort } from "react-icons/bs";
-import Sidebar from "./Sidebard";
+import Sidebar from "./Sidebar";
 import { useRouter } from "next/router";
 
 interface LinkProps {
@@ -12,7 +12,7 @@ interface LinkProps {
 export const LinksArray: LinkProps[] = [
 	{
 		label: "Home",
-		href: "",
+		href: "/",
 	},
 	{
 		label: "About Us",
@@ -48,12 +48,18 @@ const Navbar = () => {
 		}
 	}, [showMobile]);
 
+	useEffect(() => {
+		setShowMobile((current) => !current);
+	}, [router.pathname]);
+
 	return (
 		<div className="flex justify-center">
 			<div className="md:container  m-auto flex items-center justify-between w-full pt-6 flex-wrap px-6 bg-neutral-50 md:px-0 fixed z-50">
-				<div className="logo text-orange-600 text-xl font-bold tracking-tighter basis-1/3">
+				<Link
+					href={"/"}
+					className="logo text-orange-600 text-xl font-bold tracking-tighter basis-1/3">
 					PeakStudio
-				</div>
+				</Link>
 				<nav className="justify-center gap-4 2xl:gap-6 font-medium tracking-tight basis-1/3 hidden xl:flex">
 					{LinksArray.map((link, index) => (
 						<Link key={index} href={link.href}>

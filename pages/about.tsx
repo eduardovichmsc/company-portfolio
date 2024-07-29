@@ -1,3 +1,4 @@
+import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Journey from "@/components/sections/Journey";
@@ -12,23 +13,12 @@ const poppins = Poppins({
 
 const About = () => {
 	return (
-		<main className={`${poppins.className}`}>
+		<main className="">
 			<Navbar />
-
-			<div className="container mx-auto section-wrapper">
-				<div className="flex flex-row items-center">
-					<div className="basis-3/5 pr-40 flex flex-col gap-6 mb-32">
-						<p className="section-title">About Us</p>
-						<p className="section-body tracking-tight">
-							Crafting Timeless Spaces with Innovative Designs. Meticulous
-							Attention to Detail, and a Passion for Sustainable Living to
-							Inspire, Enrich, and Transform the Way We Experience Our Build
-							Environment.
-						</p>
-					</div>
-					<div className="basis-2/5 aspect-4/3 rounded-2xl bg-orange-500"></div>
-				</div>
-			</div>
+			<Banner
+				title="About Us"
+				body="Crafting Timeless Spaces with Innovative Designs. Meticulous Attention to Detail, and a Passion for Sustainable Living to Inspire, Enrich, and Transform the Way We Experience Our Build Environment."
+			/>
 			<div className="bg-white section-wrapper">
 				<Journey />
 				<Mastery />

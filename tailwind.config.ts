@@ -17,6 +17,9 @@ const config: Config = {
 				"3/4": "3 / 4",
 				"4/3": "4 / 3",
 			},
+			fontFamily: {
+				poppins: ["Poppins"],
+			},
 		},
 	},
 	plugins: [],

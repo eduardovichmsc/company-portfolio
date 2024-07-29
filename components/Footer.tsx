@@ -1,5 +1,5 @@
-import { link } from "fs";
 import Link from "next/link";
+import { Input } from "@nextui-org/input";
 import { FC, useState } from "react";
 
 interface FooterCardProps {
@@ -48,15 +48,27 @@ const Footer = () => {
 							<form action="">
 								<input
 									type="email"
-									className={`bg-transparent border-b outline-none py-4 pb-5 placeholder:text-neutral-400 w-full pr-32 text-white transition ${
+									className={`bg-transparent border-b outline-none py-6 pb-2 placeholder:text-neutral-400 w-full pr-32 peer text-white focus:ring-0 appearance-none transition ${
 										email.length > 0 ? "border-white" : "border-neutral-400"
 									}`}
-									placeholder="Enter Email Address"
+									placeholder=" "
 									value={email}
 									onChange={(e) => setEmail(e.target.value)}
+									id="email"
 								/>
+								<label
+									htmlFor="email"
+									className={`text-neutral-600 absolute bottom-[25%] left-0 transition peer-placeholder-shown:scale-100
+										peer-focus:text-neutral-300
+										peer-placeholder-shown:translate-y-0
+										peer-focus:scale-75
+										peer-focus:-translate-y-5 ${
+											email.length > 0 && "-translate-y-5 scale-75 opacity-0"
+										}`}>
+									Email
+								</label>
 								<button
-									className="bg-transparent border-2 text-white px-3.5 py-1.5 rounded-3xl absolute right-0 bottom-[25%] text-sm hover:text-black hover:bg-white transition"
+									className="bg-transparent border-2 text-white px-3.5 py-1.5 rounded-3xl absolute right-0 bottom-[25%] text-sm hover:text-black hover:bg-white transition focus:bg-white focus:text-black"
 									type="submit">
 									Subscribe
 								</button>

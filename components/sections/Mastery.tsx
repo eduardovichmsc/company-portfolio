@@ -1,3 +1,5 @@
+import Button from "../Button";
+
 const Mastery = () => {
 	return (
 		<div className="container m-auto flex flex-col-reverse gap-10 lg:flex-row justify-between section">
@@ -31,12 +33,12 @@ const Mastery = () => {
 				</div>
 
 				<div className="flex gap-4 md:gap-8 mt-10 md:flex-row flex-col">
-					<button className="text-white bg-orange-500 px-8 py-4 text-lg tracking-wide font-medium hover:bg-orange-400 transition">
+					<Button primary className="">
 						Contact Us
-					</button>
-					<button className="border-2 border-neutral-300 px-8 py-4 text-lg tracking-wide font-medium text-neutral-600 hover:text-neutral-800 hover:bg-neutral-200 hover:border-transparent transition">
+					</Button>
+					<Button secondary className="">
 						Book A Call
-					</button>
+					</Button>
 				</div>
 			</div>
 			<div className="size-[70%] lg:size-[45%] aspect-square bg-orange-500 rounded-2xl relative hidden md:block"></div>

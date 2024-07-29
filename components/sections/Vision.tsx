@@ -1,3 +1,5 @@
+import Button from "../Button";
+
 const Vision = () => {
 	return (
 		<div className="container mx-auto section">
@@ -9,12 +11,12 @@ const Vision = () => {
 				Solutions to Shape Your Vision into Reality
 			</p>
 			<div className="flex gap-4 md:gap-8 mt-10 md:flex-row flex-col justify-center">
-				<button className="text-white bg-orange-500 px-8 py-4 text-lg tracking-wide font-medium hover:bg-orange-400 transition">
+				<Button primary className="">
 					Contact Us
-				</button>
-				<button className="border-2 border-neutral-300 px-8 py-4 text-lg tracking-wide font-medium text-neutral-600 hover:text-neutral-800 hover:bg-neutral-200 hover:border-transparent transition">
+				</Button>
+				<Button secondary className="">
 					Book A Call
-				</button>
+				</Button>
 			</div>
 		</div>
 	);
