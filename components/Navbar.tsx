@@ -26,10 +26,6 @@ export const LinksArray: LinkProps[] = [
 		label: "Portfolio",
 		href: "/portfolio",
 	},
-	{
-		label: "Testimonals",
-		href: "/testimonals",
-	},
 ];
 
 const Navbar = () => {
@@ -49,39 +45,43 @@ const Navbar = () => {
 	}, [showMobile]);
 
 	useEffect(() => {
-		setShowMobile((current) => !current);
+		if (showMobile) {
+			setShowMobile(false);
+		}
 	}, [router.pathname]);
 
 	return (
-		<div className="flex justify-center">
-			<div className="md:container  m-auto flex items-center justify-between w-full pt-6 flex-wrap px-6 bg-neutral-50 md:px-0 fixed z-50">
-				<Link
-					href={"/"}
-					className="logo text-orange-600 text-xl font-bold tracking-tighter basis-1/3">
-					PeakStudio
-				</Link>
-				<nav className="justify-center gap-4 2xl:gap-6 font-medium tracking-tight basis-1/3 hidden xl:flex">
-					{LinksArray.map((link, index) => (
-						<Link key={index} href={link.href}>
-							{link.label}
-						</Link>
-					))}
-				</nav>
-				<div className=" md:basis-2/4 xl:basis-1/3 hidden md:block">
+		<div className="flex justify-center w-full bg-neutral-50">
+			<div className="bg-inherit w-full pt-6 px-6 md:px-0 fixed z-50">
+				<div className="container mx-auto flex flex-wrap items-center justify-between">
 					<Link
-						href={router.pathname === "/" ? "/portfolio" : "/contacts"}
-						className="w-fit text-white bg-orange-500 px-6 py-3 rounded-sm flex items-center hover:bg-orange-400 transition group ml-auto">
-						{router.pathname === "/" ? "Explore Projects" : "Contact Us"}
-						{router.pathname === "/" && (
-							<BsArrowRightShort
-								size={25}
-								className="mt-px ml-2 group-hover:translate-x-2 transition duration-300"
-							/>
-						)}
+						href={"/"}
+						className="logo text-orange-600 text-xl font-bold tracking-tighter basis-1/3">
+						PeakStudio
 					</Link>
+					<nav className="justify-center gap-4 2xl:gap-6 font-medium tracking-tight basis-1/3 hidden xl:flex">
+						{LinksArray.map((link, index) => (
+							<Link key={index} href={link.href}>
+								{link.label}
+							</Link>
+						))}
+					</nav>
+					<div className=" md:basis-2/4 xl:basis-1/3 hidden md:block">
+						<Link
+							href={router.pathname === "/" ? "/portfolio" : "/contacts"}
+							className="w-fit text-white bg-orange-500 px-6 py-3 rounded-sm flex items-center hover:bg-orange-400 transition group ml-auto">
+							{router.pathname === "/" ? "Explore Projects" : "Contact Us"}
+							{router.pathname === "/" && (
+								<BsArrowRightShort
+									size={25}
+									className="mt-px ml-2 group-hover:translate-x-2 transition duration-300"
+								/>
+							)}
+						</Link>
+					</div>
+					<Sidebar setShow={handleToggleMobile} showMobile={showMobile} />
+					<div className="bg-gray-300 w-full h-px mt-6" />
 				</div>
-				<Sidebar setShow={handleToggleMobile} showMobile={showMobile} />
-				<div className="bg-gray-300 w-full h-px mt-6" />
 			</div>
 		</div>
 	);

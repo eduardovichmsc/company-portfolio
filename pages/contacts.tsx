@@ -76,7 +76,7 @@ const Contacts = () => {
 	};
 
 	return (
-		<main className="min-h-screen">
+		<>
 			<Navbar />
 			<Banner
 				title="Contact Us"
@@ -153,7 +153,7 @@ const Contacts = () => {
 				</div>
 			</div>
 			<Footer />
-		</main>
+		</>
 	);
 };
 

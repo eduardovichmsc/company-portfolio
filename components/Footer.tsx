@@ -16,7 +16,7 @@ const FooterCard: FC<FooterCardProps> = ({ title, links }) => {
 					<Link
 						key={index}
 						href={link.href}
-						className="hover:text-neutral-300 transition">
+						className="hover:text-neutral-300 focus:text-neutral-300 transition">
 						{link.label}
 					</Link>
 				))}

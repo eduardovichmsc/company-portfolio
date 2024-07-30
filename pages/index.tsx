@@ -1,28 +1,28 @@
 import { Inter, Poppins } from "next/font/google";
 
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import InfoCard from "@/components/InfoCard";
-import { SwiperSlide, Swiper } from "swiper/react";
-import Footer from "@/components/Footer";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Journey from "@/components/sections/Journey";
 import Vision from "@/components/sections/Vision";
 import Button from "@/components/Button";
 
+import "swiper/css";
+import "swiper/swiper-bundle.css";
+import { Pagination } from "swiper/modules";
+import PortfolioCard from "@/components/PortfolioCard";
+import { PortfolioArray } from "./portfolio";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+
 const inter = Inter({ subsets: ["latin"] });
-const poppins = Poppins({
-	subsets: ["latin"],
-	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
 
 export default function Home() {
 	return (
-		<main className={`min-h-screen ${poppins.className} overflow-x-hidden`}>
-			<Navbar />
+		<>
 			<div className="wrapper">
 				<Hero />
-				<div className="bg-white w-full">
-					<div className="container mx-auto py-20">
+				<div className="bg-white w-full section-wrapper">
+					<div className="container mx-auto py-20 section">
 						<p className="section-title text-center">
 							Our Collaborative Approach
 						</p>
@@ -104,19 +104,22 @@ export default function Home() {
 								</p>
 							</div>
 							<div className="hidden lg:block">
-								<button className="text-white bg-orange-500 break- px-8 py-4 text-lg tracking-wide font-medium hover:bg-orange-400 transition">
+								<button className="text-white bg-orange-500 px-8 py-4 text-lg tracking-wide font-medium hover:bg-orange-400 transition">
 									View More
 								</button>
 							</div>
 						</div>
 						<div className="container mx-auto mt-16">
-							{/* <div className="bg-black aspect-3/4 w-1/4 rounded-lg"></div> */}
-							<Swiper
-								spaceBetween={50}
-								slidesPerView={3}
-								onSlideChange={() => console.log("slide change")}
-								onSwiper={(swiper) => console.log(swiper)}>
-								<div className="bg-black aspect-3/4 w-1/4 rounded-lg"></div>
+							<div className="flex ml-auto gap-1 items-center w-fit text-sm font-base mr-2 mb-2">
+								<BsArrowLeft className="text-neutral-500" />
+								<BsArrowRight className="text-neutral-500" />
+							</div>
+							<Swiper slidesPerView={3} spaceBetween={30} className="">
+								{PortfolioArray.map((item) => (
+									<SwiperSlide key={item.title} className="">
+										<PortfolioCard title={item.title} body={item.body} />
+									</SwiperSlide>
+								))}
 							</Swiper>
 						</div>
 					</div>
@@ -142,8 +145,6 @@ export default function Home() {
 					<Vision />
 				</div>
 			</div>
-
-			<Footer />
-		</main>
+		</>
 	);
 }

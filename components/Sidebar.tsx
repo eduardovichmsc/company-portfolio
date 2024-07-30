@@ -12,8 +12,11 @@ const Sidebar: FC<SidebarProps> = ({ showMobile, setShow }) => {
 	const router = useRouter();
 
 	const handleLinkClick = (href: string) => {
-		if (router.pathname === href && showMobile) {
+		if (showMobile) {
 			setShow();
+		}
+		if (router.pathname !== href) {
+			router.push(href);
 		}
 	};
 
@@ -38,13 +41,12 @@ const Sidebar: FC<SidebarProps> = ({ showMobile, setShow }) => {
 					showMobile ? "-translate-x-6" : "translate-x-[100vw]"
 				}`}>
 				{LinksArray.map((link, index) => (
-					<Link
+					<div
 						key={index}
-						href={link.href}
-						onClick={() => handleLinkClick(link.href)}
-						className="w-full text-end mr-6 md:mr-[6.4rem]">
+						className="w-full text-end mr-6 md:mr-[6.4rem]"
+						onClick={() => handleLinkClick(link.href)}>
 						{link.label}
-					</Link>
+					</div>
 				))}
 			</div>
 		</div>
