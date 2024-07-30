@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BsArrowRightShort } from "react-icons/bs";
-import Sidebar from "./Sidebar";
 import { useRouter } from "next/router";
+import Sidebar from "./Sidebar";
 
 interface LinkProps {
 	label: string;
@@ -68,7 +68,9 @@ const Navbar = () => {
 					))}
 				</nav>
 				<div className=" md:basis-2/4 xl:basis-1/3 hidden md:block">
-					<button className="text-white bg-orange-500 px-6 py-3 rounded-sm flex items-center hover:bg-orange-400 transition group ml-auto">
+					<Link
+						href={router.pathname === "/" ? "/portfolio" : "/contacts"}
+						className="w-fit text-white bg-orange-500 px-6 py-3 rounded-sm flex items-center hover:bg-orange-400 transition group ml-auto">
 						{router.pathname === "/" ? "Explore Projects" : "Contact Us"}
 						{router.pathname === "/" && (
 							<BsArrowRightShort
@@ -76,7 +78,7 @@ const Navbar = () => {
 								className="mt-px ml-2 group-hover:translate-x-2 transition duration-300"
 							/>
 						)}
-					</button>
+					</Link>
 				</div>
 				<Sidebar setShow={handleToggleMobile} showMobile={showMobile} />
 				<div className="bg-gray-300 w-full h-px mt-6" />

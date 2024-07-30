@@ -62,6 +62,7 @@ const Footer = () => {
 										peer-focus:text-neutral-300
 										peer-placeholder-shown:translate-y-0
 										peer-focus:scale-75
+										peer-focus:-translate-x-1.5
 										peer-focus:-translate-y-5 ${
 											email.length > 0 && "-translate-y-5 scale-75 opacity-0"
 										}`}>

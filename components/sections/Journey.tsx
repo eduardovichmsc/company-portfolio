@@ -13,7 +13,7 @@ const Journey = () => {
 					</div>
 				</div>
 			</div>
-			<div className="size-full lg:size-1/2 lg:ml-20 xl:ml-40 py-16 flex flex-col">
+			<div className="size-full lg:size-1/2 lg:ml-20 xl:ml-40 py-8 md:py-16 flex flex-col">
 				<p className="section-title">The Journey to Architectural Excellence</p>
 				<div className="flex flex-col gap-0 xl:gap-4 mt-6">
 					<p className="text-medium md:font-semibold text-xl md:text-2xl tracking-tight">

@@ -8,8 +8,8 @@ export interface ServiceCardProps {
 
 const ServiceCard: FC<ServiceCardProps> = ({ label, body, image }) => {
 	return (
-		<div className="border-[3px] border-neutral-100 rounded-2xl w-fit p-10 space-y-6">
-			<div className="size-80 bg-orange-300 bg-opacity-20 rounded-xl mx-auto"></div>
+		<div className="border-[3px] border-neutral-100 rounded-2xl p-10 space-y-6">
+			<div className="w-full aspect-square bg-orange-300 bg-opacity-20 rounded-xl mx-auto"></div>
 			<div className="space-y-2">
 				<p className="text-2xl font-semibold tracking-tight text-center">
 					{label}

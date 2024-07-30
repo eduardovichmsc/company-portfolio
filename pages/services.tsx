@@ -49,8 +49,8 @@ const Services = () => {
 			/>
 
 			<div className="bg-white section-wrapper space-y-10">
-				<div className="container mx-auto">
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+				<div className="container mx-auto mt-16 md:mt-0">
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-4 lg:gap-8 xl:gap-16">
 						{ServicesArray.map(({ label, body }) => (
 							<ServiceCard label={label} body={body} key={label} />
 						))}

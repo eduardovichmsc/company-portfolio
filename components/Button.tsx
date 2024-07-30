@@ -2,6 +2,7 @@ import { FC } from "react";
 
 interface ButtonPropsBase {
 	className?: string | string[];
+	onClick?: () => any;
 	children: React.ReactNode | string;
 }
 
@@ -19,6 +20,7 @@ type ButtonProps = PrimaryButtonProps | SecondaryButtonProps;
 
 const Button: FC<ButtonProps> = ({
 	className = [],
+	onClick,
 	children,
 	primary,
 	secondary,
@@ -33,7 +35,8 @@ const Button: FC<ButtonProps> = ({
 	if (primary) {
 		return (
 			<button
-				className={`text-white bg-orange-500 px-8 py-4 text-lg tracking-wide font-medium hover:bg-orange-400 transition ${newClasses}`}>
+				className={`text-white bg-orange-500 px-8 py-4 text-lg tracking-wide font-medium hover:bg-orange-400 transition ${newClasses}`}
+				onClick={onClick}>
 				{children}
 			</button>
 		);
@@ -41,7 +44,8 @@ const Button: FC<ButtonProps> = ({
 
 	return (
 		<button
-			className={`border-2 border-neutral-300 px-8 py-4 text-lg tracking-wide font-medium text-neutral-600 hover:text-neutral-800 hover:bg-neutral-200 hover:border-transparent transition ${newClasses}`}>
+			className={`border-2 border-neutral-300 px-8 py-4 text-lg tracking-wide font-medium text-neutral-600 hover:text-neutral-800 hover:bg-neutral-200 hover:border-transparent transition ${newClasses}`}
+			onClick={onClick}>
 			{children}
 		</button>
 	);

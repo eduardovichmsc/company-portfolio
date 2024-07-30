@@ -13,7 +13,7 @@ const poppins = Poppins({
 
 const About = () => {
 	return (
-		<main className="">
+		<main className="min-h-screen">
 			<Navbar />
 			<Banner
 				title="About Us"

@@ -7,6 +7,7 @@ import { SwiperSlide, Swiper } from "swiper/react";
 import Footer from "@/components/Footer";
 import Journey from "@/components/sections/Journey";
 import Vision from "@/components/sections/Vision";
+import Button from "@/components/Button";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
@@ -18,7 +19,7 @@ export default function Home() {
 	return (
 		<main className={`min-h-screen ${poppins.className} overflow-x-hidden`}>
 			<Navbar />
-			<div className="mt-20 md:mt-32">
+			<div className="wrapper">
 				<Hero />
 				<div className="bg-white w-full">
 					<div className="container mx-auto py-20">
@@ -80,12 +81,12 @@ export default function Home() {
 							</div>
 
 							<div className="flex gap-4 md:gap-8 mt-10 md:flex-row flex-col">
-								<button className="text-white bg-orange-500 px-8 py-4 text-lg tracking-wide font-medium hover:bg-orange-400 transition">
-									Contact Us
-								</button>
-								<button className="border-2 border-neutral-300 px-8 py-4 text-lg tracking-wide font-medium text-neutral-600 hover:text-neutral-800 hover:bg-neutral-200 hover:border-transparent transition">
+								<Button primary className="hidden lg:block">
+									Contact us
+								</Button>
+								<Button secondary className="hidden lg:block">
 									Book A Call
-								</button>
+								</Button>
 							</div>
 						</div>
 						<div className="size-[70%] lg:size-[45%] aspect-square bg-orange-500 rounded-2xl relative hidden md:block"></div>
@@ -129,9 +130,11 @@ export default function Home() {
 								<p className="text-2xl md:text-5xl font-medium leading-tight tracking-tighter text-white relative">
 									Start Your Architectural with PeakStudio
 								</p>
-								<button className="text-white bg-orange-500 px-8 py-4 text-base md:text-lg tracking-wide font-medium hover:bg-orange-400 transition w-full md:w-fit relative">
+								<Button
+									primary
+									className="px-8 py-4 md:text-lg tracking-widew-full md:w-fit relative">
 									Get Started
-								</button>
+								</Button>
 							</div>
 						</div>
 					</div>
