@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Input } from "@nextui-org/input";
 import { FC, useState } from "react";
 
 interface FooterCardProps {
