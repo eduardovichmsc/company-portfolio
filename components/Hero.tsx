@@ -32,7 +32,9 @@ const Hero = () => {
 				Tomorrow&apos;s World through Timeless Design Excellence and Inspired
 				Space Crafted for Today and Beyond
 			</p>
-			<div className="aspect-[3/4] md:aspect-video w-[100%] bg-orange-200 rounded-xl my-10 sm:my-14"></div>
+			<div
+				className="aspect-[3/4] md:aspect-video w-[100%] bg-orange-200 rounded-xl my-10 sm:my-14 bg-cover bg-center bg-no-repeat"
+				style={{ backgroundImage: "url(/images/hero.jpg)" }}></div>
 		</div>
 	);
 };

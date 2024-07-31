@@ -77,6 +77,7 @@ const Contacts = () => {
 			<Navbar />
 			<Banner
 				title="Contact Us"
+				image="images/contacts.jpeg"
 				body="Get in Touch: Let's Start Building Your Dream Together. Reach Out to Our Team of Experts Today!"
 			/>
 			<div className="bg-white section-wrapper">

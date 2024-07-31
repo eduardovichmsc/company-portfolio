@@ -20,6 +20,7 @@ const Portfolio = () => {
 		<div className="space-y-14 lg:space-y-0">
 			<Banner
 				title="Portfolio"
+				image="images/portfolio.png"
 				body="Discover Our Creations: A Showcase of Inspiring Projects Reflecting Our Dedication to Innovation, Quality Craftsmanship, and Timeless Design in Architecture."
 			/>
 

@@ -13,6 +13,7 @@ import { Pagination } from "swiper/modules";
 import PortfolioCard from "@/components/PortfolioCard";
 import { PortfolioArray } from "./portfolio";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import Mastery from "@/components/sections/Mastery";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -50,47 +51,7 @@ export default function Home() {
 				<div className="flex flex-col gap-16 md:gap-32 md:pt-36 md:pb-24">
 					<Journey />
 
-					<div className="container m-auto flex flex-col-reverse gap-10 lg:flex-row justify-between section">
-						<div className="size-full lg:size-[45%] flex flex-col gap-4">
-							<p className="section-title">
-								Discovering Architectural Mastery Evolution
-							</p>
-							<p className="section-body w-[80%] tracking-tighter">
-								Exploring the Intersection of Vision, Innovation, Craftsmanship
-								provisions and performing accounting duties.
-							</p>
-
-							<div className="flex mt-6 gap-10 md:gap-20">
-								<div className="flex flex-col">
-									<p className="text-4xl md:text-5xl text-orange-600 font-medium tracking-tighter">
-										205M+
-									</p>
-									<p className="text-base md:text-lg font-medium mt-0 md:mt-4 tracking-tight">
-										Monthly active users
-									</p>
-								</div>
-
-								<div className="flex flex-col">
-									<p className="text-4xl md:text-5xl text-orange-600 font-medium tracking-tighter">
-										99%
-									</p>
-									<p className="text-base md:text-lg font-medium mt-0 md:mt-4 tracking-tight">
-										Customer satisfaction
-									</p>
-								</div>
-							</div>
-
-							<div className="flex gap-4 md:gap-8 mt-10 md:flex-row flex-col">
-								<Button primary className="hidden lg:block">
-									Contact us
-								</Button>
-								<Button secondary className="hidden lg:block">
-									Book A Call
-								</Button>
-							</div>
-						</div>
-						<div className="size-[70%] lg:size-[45%] aspect-square bg-orange-500 rounded-2xl relative hidden md:block"></div>
-					</div>
+					<Mastery />
 
 					<div className="section">
 						<div className="container mx-auto flex justify-between items-center">
@@ -126,7 +87,7 @@ export default function Home() {
 
 					<div
 						className="w-full md:p-32 bg-cover bg-center bg-opacity-20"
-						style={{ backgroundImage: "url('/images/building-day.jpg')" }}>
+						style={{ backgroundImage: "url('/images/long.jpg')" }}>
 						<div className="container mx-auto">
 							<div className="w-[100%] lg:w-[55%] bg rounded-none md:rounded-[2rem] px-8 md:px-16 py-10 md:py-20 flex flex-col justify-center gap-4 md:gap-8 md:border-2 md:border-white relative">
 								<div className="absolute backdrop-blur-md w-full h-full top-0 left-0 md:rounded-[2rem]"></div>

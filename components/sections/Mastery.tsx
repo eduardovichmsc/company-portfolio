@@ -41,7 +41,9 @@ const Mastery = () => {
 					</Button>
 				</div>
 			</div>
-			<div className="size-[70%] lg:size-[45%] aspect-square bg-orange-500 rounded-2xl relative hidden md:block"></div>
+			<div
+				className="size-[70%] lg:size-[45%] aspect-square bg-orange-500 rounded-2xl relative hidden md:block bg-cover bg-center bg-no-repeat"
+				style={{ backgroundImage: "url(images/mastery.jpg)" }}></div>
 		</div>
 	);
 };

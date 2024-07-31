@@ -45,6 +45,7 @@ const Services = () => {
 			<Navbar />
 			<Banner
 				title="Services"
+				image="images/services.jpg"
 				body="Explore Our Expertise: Elevating Spaces, Enriching Lives, and Bringing Your Vision to Life with Our Comprehensive Range of Architectural Design and Consultation Services."
 			/>
 

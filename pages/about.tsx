@@ -17,6 +17,7 @@ const About = () => {
 			<Navbar />
 			<Banner
 				title="About Us"
+				image="images/about.jpg"
 				body="Crafting Timeless Spaces with Innovative Designs. Meticulous Attention to Detail, and a Passion for Sustainable Living to Inspire, Enrich, and Transform the Way We Experience Our Build Environment."
 			/>
 			<div className="bg-white section-wrapper">
