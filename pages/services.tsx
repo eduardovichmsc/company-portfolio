@@ -41,28 +41,31 @@ const ServicesArray: ServiceCardProps[] = [
 
 const Services = () => {
 	return (
-		<main>
-			<Navbar />
-			<Banner
-				title="Services"
-				image="images/services.jpg"
-				body="Explore Our Expertise: Elevating Spaces, Enriching Lives, and Bringing Your Vision to Life with Our Comprehensive Range of Architectural Design and Consultation Services."
-			/>
+		<>
+			<title>PeakStudio - Services</title>
+			<main>
+				<Navbar />
+				<Banner
+					title="Services"
+					image="images/services.jpg"
+					body="Explore Our Expertise: Elevating Spaces, Enriching Lives, and Bringing Your Vision to Life with Our Comprehensive Range of Architectural Design and Consultation Services."
+				/>
 
-			<div className="bg-white section-wrapper space-y-10">
-				<div className="container mx-auto mt-16 md:mt-0">
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-4 lg:gap-8 xl:gap-16">
-						{ServicesArray.map(({ label, body }) => (
-							<ServiceCard label={label} body={body} key={label} />
-						))}
+				<div className="bg-white section-wrapper space-y-10">
+					<div className="container mx-auto mt-16 md:mt-0">
+						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-4 lg:gap-8 xl:gap-16">
+							{ServicesArray.map(({ label, body }) => (
+								<ServiceCard label={label} body={body} key={label} />
+							))}
+						</div>
 					</div>
+
+					<Vision />
 				</div>
 
-				<Vision />
-			</div>
-
-			<Footer />
-		</main>
+				<Footer />
+			</main>
+		</>
 	);
 };
 

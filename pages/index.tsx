@@ -20,6 +20,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
 	return (
 		<>
+			<title>PeakStudio - Home</title>
 			<div className="wrapper">
 				<Hero />
 				<div className="bg-white w-full section-wrapper">

@@ -14,6 +14,7 @@ const poppins = Poppins({
 const About = () => {
 	return (
 		<>
+			<title>PeakStudio - About us</title>
 			<Navbar />
 			<Banner
 				title="About Us"

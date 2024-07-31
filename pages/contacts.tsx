@@ -74,6 +74,7 @@ const Contacts = () => {
 
 	return (
 		<>
+			<title>PeakStudio - Contact us</title>
 			<Navbar />
 			<Banner
 				title="Contact Us"
