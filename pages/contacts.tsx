@@ -1,6 +1,7 @@
 import Banner from "@/components/Banner";
 import Button from "@/components/Button";
 import Footer from "@/components/Footer";
+import Metadata from "@/components/Metadata";
 import Navbar from "@/components/Navbar";
 import { FC } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -74,7 +75,7 @@ const Contacts = () => {
 
 	return (
 		<>
-			<title>PeakStudio - Contact us</title>
+			<Metadata title="PeakStudio - Contact us" description="Home Page" />
 			<Navbar />
 			<Banner
 				title="Contact Us"

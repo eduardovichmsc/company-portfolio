@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
+import Metadata from "@/components/Metadata";
 import Navbar from "@/components/Navbar";
 import Journey from "@/components/sections/Journey";
 import Mastery from "@/components/sections/Mastery";
@@ -14,7 +15,7 @@ const poppins = Poppins({
 const About = () => {
 	return (
 		<>
-			<title>PeakStudio - About us</title>
+			<Metadata title="PeakStudio - About us" description="Home Page" />
 			<Navbar />
 			<Banner
 				title="About Us"

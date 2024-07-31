@@ -9,18 +9,16 @@ import Button from "@/components/Button";
 
 import "swiper/css";
 import "swiper/swiper-bundle.css";
-import { Pagination } from "swiper/modules";
 import PortfolioCard from "@/components/PortfolioCard";
 import { PortfolioArray } from "./portfolio";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import Mastery from "@/components/sections/Mastery";
-
-const inter = Inter({ subsets: ["latin"] });
+import Metadata from "@/components/Metadata";
 
 export default function Home() {
 	return (
 		<>
-			<title>PeakStudio - Home</title>
+			<Metadata title="PeakStudio - Home" description="Home Page" />
 			<div className="wrapper">
 				<Hero />
 				<div className="bg-white w-full section-wrapper">

@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import Metadata from "@/components/Metadata";
 import PortfolioCard, { PortfolioCardProps } from "@/components/PortfolioCard";
 import Vision from "@/components/sections/Vision";
 
@@ -18,7 +19,7 @@ export const PortfolioArray: PortfolioCardProps[] = [
 const Portfolio = () => {
 	return (
 		<>
-			<title>PeakStudio - Portfolio</title>
+			<Metadata title="PeakStudio - Portfolio" description="Home Page" />
 			<div className="space-y-14 lg:space-y-0">
 				<Banner
 					title="Portfolio"

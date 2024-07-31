@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
+import Metadata from "@/components/Metadata";
 import Navbar from "@/components/Navbar";
 import Vision from "@/components/sections/Vision";
 import ServiceCard, { ServiceCardProps } from "@/components/ServiceCard";
@@ -42,7 +43,7 @@ const ServicesArray: ServiceCardProps[] = [
 const Services = () => {
 	return (
 		<>
-			<title>PeakStudio - Services</title>
+			<Metadata title="PeakStudio - Services" description="Home Page" />
 			<main>
 				<Navbar />
 				<Banner
