@@ -4,7 +4,7 @@ const Vision = () => {
 	return (
 		<div className="container mx-auto section">
 			<p className="section-title font-semibold leading-tight tracking-tighter text-center">
-				Let's Start Building Your Vision
+				Let&apos;s Start Building Your Vision
 			</p>
 			<p className="section-body text-xl w-[100%] md:w-[60%] tracking-tighter mt-4 mx-auto text-center">
 				Reach Out to Us for Expert Guidance, Collaborative Design, and Tailored

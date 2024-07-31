@@ -37,7 +37,7 @@ const Sidebar: FC<SidebarProps> = ({ showMobile, setShow }) => {
 					}`}></span>
 			</div>
 			<div
-				className={`border-l border-neutral-300 flex flex-col gap-10 w-[90vw] md:w-[70vw] h-screen bg-gray-50 fixed top-0 -right-6 pt-24 text-4xl items-end transition duration-300 ${
+				className={`border-l border-neutral-300 flex flex-col gap-10 w-[90vw] md:w-[70vw] h-screen bg-gray-50 fixed top-0 -right-6 pt-24 text-4xl items-end transition duration-500 ${
 					showMobile ? "-translate-x-6" : "translate-x-[100vw]"
 				}`}>
 				{LinksArray.map((link, index) => (

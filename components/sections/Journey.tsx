@@ -20,8 +20,8 @@ const Journey = () => {
 						Vision to Reality
 					</p>
 					<p className="section-body w-[80%] font-extralight tracking-tighter">
-						PeakStudio's Journey of Architectural Innovation Architectural
-						Ingenuity Unveiled PeakStudio's Path to Excellence.
+						PeakStudio&apos;s Journey of Architectural Innovation Architectural
+						Ingenuity Unveiled PeakStudio&apos;s Path to Excellence.
 					</p>
 				</div>
 

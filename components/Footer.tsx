@@ -110,7 +110,6 @@ const Footer = () => {
 					<FooterCard
 						title="Supports"
 						links={[
-							{ label: "Sosmed", href: "/" },
 							{ label: "YouTube", href: "/" },
 							{ label: "Instagram", href: "/" },
 						]}

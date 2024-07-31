@@ -25,7 +25,7 @@ const Portfolio = () => {
 
 			<div className="bg-white">
 				<div className="container mx-auto section-wrapper xl:space-y-10 md:pt-14">
-					<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-0 lg:gap-y-14 sm:py-10 md:py-0">
+					<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-0 md:gap-y-8 lg:gap-y-14 sm:py-10 md:py-0">
 						{PortfolioArray.map(({ title, body }) => (
 							<PortfolioCard key={title} title={title} body={body} />
 						))}

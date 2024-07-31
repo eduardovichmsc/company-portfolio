@@ -65,14 +65,11 @@ const Input: FC<InputProps> = ({
 };
 
 const Contacts = () => {
-	const {
-		register,
-		handleSubmit,
-		formState: { errors },
-	} = useForm<FormValues>();
+	const { register, handleSubmit, reset, formState } = useForm<FormValues>();
 
 	const sendMessage: SubmitHandler<FormValues> = (data) => {
 		console.log(data);
+		reset();
 	};
 
 	return (

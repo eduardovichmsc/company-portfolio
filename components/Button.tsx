@@ -3,6 +3,7 @@ import { FC } from "react";
 interface ButtonPropsBase {
 	className?: string | string[];
 	onClick?: () => any;
+	disabled?: boolean;
 	children: React.ReactNode | string;
 }
 
@@ -24,6 +25,7 @@ const Button: FC<ButtonProps> = ({
 	children,
 	primary,
 	secondary,
+	disabled,
 }) => {
 	let newClasses;
 	if (typeof className === "string") {
@@ -35,8 +37,9 @@ const Button: FC<ButtonProps> = ({
 	if (primary) {
 		return (
 			<button
-				className={`text-white bg-orange-500 px-8 py-4 text-lg tracking-wide font-medium hover:bg-orange-400 transition ${newClasses}`}
-				onClick={onClick}>
+				className={`text-white bg-orange-500 px-8 py-4 text-lg tracking-wide font-medium hover:bg-orange-400 transition disabled:bg-orange-300 ${newClasses}`}
+				onClick={onClick}
+				disabled={disabled}>
 				{children}
 			</button>
 		);
@@ -45,7 +48,8 @@ const Button: FC<ButtonProps> = ({
 	return (
 		<button
 			className={`border-2 border-neutral-300 px-8 py-4 text-lg tracking-wide font-medium text-neutral-600 hover:text-neutral-800 hover:bg-neutral-200 hover:border-transparent transition ${newClasses}`}
-			onClick={onClick}>
+			onClick={onClick}
+			disabled={disabled}>
 			{children}
 		</button>
 	);
