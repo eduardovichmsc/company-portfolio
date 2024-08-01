@@ -33,14 +33,17 @@ export default function Home() {
 						<div className="flex gap-5 md:gap-[5%] my-6 md:my-16 flex-wrap md:flex-nowrap">
 							<InfoCard
 								title="Visionary Consultation"
+								image="icons/category.png"
 								description="Your aspirations fuel our creativity. We begin by listeting intently, understanding your goals, and envisioning."
 							/>
 							<InfoCard
 								title="Collaborative Creation"
+								image="icons/pie-chart.png"
 								description="Together, we shape ideas into reality. Through iterative design sessions, we fuse innovation with practicality."
 							/>
 							<InfoCard
 								title="Expert Execution"
+								image="icons/teamwork.png"
 								description="From blueprint to built reality, we oversee every detail. Our meticulous planning and skilled craftsmanship bring."
 							/>
 						</div>

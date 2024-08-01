@@ -9,7 +9,9 @@ interface InfoCardProps {
 const InfoCard: FC<InfoCardProps> = ({ description, image, title }) => {
 	return (
 		<div className="w-full md:w-1/3 flex md:flex-row gap-2 flex-wrap items-center md:items-start">
-			<div className="size-16 md:size-20 rounded-lg bg-orange-100"></div>
+			<div
+				className="size-16 md:size-20 rounded-lg bg-cover bg-center"
+				style={{ backgroundImage: `url(${image})` }}></div>
 			<p className="text-lg md:text-2xl font-semibold lg:mt-6 tracking-tight basis-3/4 md:basis-full">
 				{title}
 			</p>
