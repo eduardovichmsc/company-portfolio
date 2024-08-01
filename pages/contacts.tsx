@@ -100,7 +100,7 @@ const Contacts = () => {
 					</div>
 				</div>
 
-				<div className="container mx-auto section space-y-10">
+				<div className="container mx-auto section-p space-y-10">
 					<div className="space-y-4">
 						<p className="section-title text-center">Send us a message</p>
 						<p className="section-body text-center">

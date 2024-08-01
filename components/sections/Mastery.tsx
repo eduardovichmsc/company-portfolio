@@ -2,7 +2,7 @@ import Button from "../Button";
 
 const Mastery = () => {
 	return (
-		<div className="container m-auto flex flex-col-reverse gap-10 lg:flex-row items-center justify-between section">
+		<div className="container m-auto flex flex-col-reverse gap-10 lg:flex-row items-center justify-between section-p">
 			<div className="size-full lg:size-[45%] flex flex-col gap-4">
 				<p className="section-title">
 					Discovering Architectural Mastery Evolution

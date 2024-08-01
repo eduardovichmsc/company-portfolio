@@ -35,7 +35,7 @@ body {
 .section-wrapper {
 	@apply flex flex-col space-y-10 lg:gap-16 md:gap-32 pt-0 lg:pt-24 md:pt-36 md:pb-24;
 }
-.section {
+.section-p {
 	@apply p-6 md:p-0;
 }
 .section-title {

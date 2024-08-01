@@ -1,5 +1,3 @@
-import { Inter, Poppins } from "next/font/google";
-
 import Hero from "@/components/Hero";
 import InfoCard from "@/components/InfoCard";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,15 +12,18 @@ import { PortfolioArray } from "./portfolio";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import Mastery from "@/components/sections/Mastery";
 import Metadata from "@/components/Metadata";
+import { useWidthChange } from "@/hooks/useWidthChange";
 
 export default function Home() {
+	const screenWidth = useWidthChange();
+
 	return (
 		<>
 			<Metadata title="PeakStudio - Home" description="Home Page" />
 			<div className="wrapper">
 				<Hero />
 				<div className="bg-white w-full section-wrapper">
-					<div className="container mx-auto py-20 section">
+					<div className="container mx-auto py-20 section-p">
 						<p className="section-title text-center">
 							Our Collaborative Approach
 						</p>
@@ -55,7 +56,7 @@ export default function Home() {
 
 					<Mastery />
 
-					<div className="section">
+					<div className="section-p">
 						<div className="container mx-auto flex justify-between items-center">
 							<div className="">
 								<p className="section-title w-fit">
@@ -77,9 +78,14 @@ export default function Home() {
 								<BsArrowLeft className="text-neutral-500" />
 								<BsArrowRight className="text-neutral-500" />
 							</div>
-							<Swiper slidesPerView={3} spaceBetween={30} className="">
+							<Swiper
+								slidesPerView={
+									screenWidth > 769 ? 3 : screenWidth < 640 ? 1.2 : 2
+								}
+								spaceBetween={30}
+								className="">
 								{PortfolioArray.map((item) => (
-									<SwiperSlide key={item.title} className="">
+									<SwiperSlide key={item.title} className="mr-0">
 										<PortfolioCard title={item.title} body={item.body} />
 									</SwiperSlide>
 								))}

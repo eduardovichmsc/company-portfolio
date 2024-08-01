@@ -2,7 +2,7 @@ import Button from "../Button";
 
 const Vision = () => {
 	return (
-		<div className="container mx-auto section">
+		<div className="container mx-auto section-p">
 			<p className="section-title font-semibold leading-tight tracking-tighter text-center">
 				Let&apos;s Start Building Your Vision
 			</p>

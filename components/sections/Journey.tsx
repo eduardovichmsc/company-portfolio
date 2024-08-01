@@ -1,6 +1,6 @@
 const Journey = () => {
 	return (
-		<div className="container m-auto w-full flex section">
+		<div className="container m-auto w-full flex section-p">
 			<div
 				className="size-[45%] aspect-square bg-orange-500 rounded-2xl relative hidden lg:block bg-cover bg-[66%] bg-no-repeat"
 				style={{ backgroundImage: "url(images/journey.jpg)" }}>
